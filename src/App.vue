@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+<div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Home msg="Welcome to Gagan Vue.js App"/>
-  </div>
+</div>
 </template>
 
 <script>
@@ -41,4 +41,10 @@ export default {
   margin: 0px;
   padding: 0px;
 }
+div {
+  .top {
+    margin-top: -160px;
+  }
+}
+
 </style>

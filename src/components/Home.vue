@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-top">
     <h1>{{ msg }}</h1>
-    <div v-if="selectedUser==0">
+    <div class="bd-highlight" v-if="selectedUser==0">
       <ul id="list-users">
         <li  v-for="user in users" :key="user.id" @click="selectUser(user.id)">{{user.name}}</li>
       </ul>
@@ -9,9 +9,10 @@
     <div v-else>
         <CButton @click="selectedUser = 0"
             
-            color="success"
-            size="lg"
-            class="m-2"
+            color="info"
+            position="left"
+            size="sm"
+            class="pull-left"
           >
               Go Back
           </CButton>
@@ -57,10 +58,13 @@ ul {
   li {
     margin-top: 14px;
     cursor: pointer;
+    font-size: 2em;
+    font-family: "Times New Roman", Times, serif;
   }
 }
 button {
   cursor: pointer;
+  position: relative;
 }
 
 </style>

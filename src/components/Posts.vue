@@ -1,14 +1,13 @@
 <template>
-    <div v-if="userid != 0">
+
+    <div class="col-md" v-if="userid != 0">
         <div v-for="post in filteredPosts" :key="post.id">
             <div>
-                <h4>{{post.title}}</h4>
+                <h4 class="post-title">{{post.title}}</h4>
             </div>
-            <div v-scroll="handleScroll">
+            <div class="post-body">
                     {{post.body}}
             </div>
-
-            <hr/>
         </div>
     </div>
 
@@ -50,3 +49,12 @@ export default {
     },
 }
 </script>
+<style scoped lang="scss">
+.post-title {
+    text-align:left;
+    margin-top: 3px;
+}
+.post-body {
+    text-align: left;
+}
+</style>
