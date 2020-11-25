@@ -1,14 +1,13 @@
 <template>
-  <div class="fixed-top">
+  <div class="container">
     <h1>{{ msg }}</h1>
-    <div class="bd-highlight" v-if="selectedUser==0">
-      <ul id="list-users">
-        <li  v-for="user in users" :key="user.id" @click="selectUser(user.id)">{{user.name}}</li>
+    <div class="" v-if="selectedUser==0">
+      <ul id="list-users" class="text-center">
+        <li v-for="user in users" :key="user.id" @click="selectUser(user.id)">{{user.name}}</li>
       </ul>
     </div>
     <div v-else>
         <CButton @click="selectedUser = 0"
-            
             color="info"
             position="left"
             size="sm"
@@ -59,12 +58,17 @@ ul {
     margin-top: 14px;
     cursor: pointer;
     font-size: 2em;
-    font-family: "Times New Roman", Times, serif;
+    font-family: sans-serif;
+    list-style-type: none;
   }
 }
 button {
   cursor: pointer;
   position: relative;
+}
+
+h1 {
+  text-align: center;
 }
 
 </style>

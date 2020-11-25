@@ -1,13 +1,14 @@
 <template>
 
-    <div class="col-md" v-if="userid != 0">
-        <div v-for="post in filteredPosts" :key="post.id">
+    <div class="row" v-if="userid != 0">
+        <div class="col-12 col-sm-6 col-md-4" v-for="post in filteredPosts" :key="post.id">
             <div>
                 <h4 class="post-title">{{post.title}}</h4>
             </div>
             <div class="post-body">
                     {{post.body}}
             </div>
+            <hr/>
         </div>
     </div>
 
